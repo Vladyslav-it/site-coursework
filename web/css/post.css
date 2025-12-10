@@ -1,0 +1,100 @@
+.post-card {
+    transition: all .3s;
+    border: 1px solid #dee2e6;
+    background-color: #fff;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.post-card:hover {
+    box-shadow: 0 10px 20px -15px rgba(0, 0, 0, 0.75);
+}
+
+.post-image {
+    width: 100%;
+    height: 350px;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-details {
+    padding: 10px 15px;
+}
+
+.post-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #212121;
+}
+
+.post-title:hover {
+    color: #616161;
+}
+
+.post-text {
+    font-size: 15px;
+    font-weight: 400;
+    color: #212121;
+    margin-bottom: 8px;
+}
+
+.post-date {
+    font-size: 13px;
+    font-weight: 400;
+    color: #212121;
+    margin-bottom: 0px;
+}
+
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.page-link { /* це ПАГІНАЦІЯ */
+    font-size: 17px;
+    font-weight: 500;
+    color: #212121 !important;
+}
+
+.page-link:hover {
+    color: #212121 !important;
+    background-color: #FFEB3B !important;
+    border-color: #FFEB3B !important;
+    opacity: 0.8;
+}
+
+.page-link:focus {
+    box-shadow: none !important;
+}
+
+
+.active > .page-link, .page-link.active {
+	background-color: #FFEB3B !important;
+    border-color: #FFEB3B !important;
+    color: #212121 !important;
+}
+
+.pagination li.disabled span {
+    background-color: #fff !important;
+    border: 1px solid #dee2e6 !important;
+    color: #212121 !important;
+
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+
+    width: 34.24px !important;
+    height: 38px !important;
+
+    font-size: 17px;
+    font-weight: 500;
+}

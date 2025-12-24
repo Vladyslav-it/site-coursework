@@ -1,0 +1,38 @@
+/* Контейнер */
+.breadcrumb {
+    margin: 30px 0 !important;
+    background-color: #fff !important;
+    padding: 0.5rem !important;
+    border-radius: 5px !important;
+}
+
+/* Список */
+.breadcrumb-item {
+    font-size: 15px;
+    font-weight: 400;
+    color: #212121 !important;
+}
+
+/* Посилання */
+.breadcrumb-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.breadcrumb-item a:hover {
+    color: #616161 !important;
+}
+
+/* Розділювач  */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    padding: 0 0.5rem;
+    color: #212121 !important;
+}
+
+/* Активний */
+.breadcrumb-item.active {
+    font-weight: 600;
+    color: #212121 !important;
+}

@@ -17,7 +17,9 @@
         "php": ">=7.4.0",
         "yiisoft/yii2": "~2.0.45",
         "yiisoft/yii2-bootstrap5": "~2.0.2",
-        "yiisoft/yii2-symfonymailer": "~2.0.3"
+        "yiisoft/yii2-symfonymailer": "~2.0.3",
+        "ckeditor/ckeditor": "4.22.1",
+        "2amigos/yii2-ckeditor-widget": "^2.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
@@ -37,7 +39,14 @@
         "process-timeout": 1800,
         "fxp-asset": {
             "enabled": false
+        },
+        "audit": {
+          "ignore": [
+            "PKSA-sd3x-9jwt-jn4s",
+            "PKSA-4d16-gn5t-2wt7"
+          ]
         }
+    
     },
     "scripts": {
         "post-install-cmd": [

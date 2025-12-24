@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
 
-<div class="container mt-3">
+<div class="container mt-4">
     <div class="card shadow-sm card-form">
         <div class="form-title">
             <h4 class="mb-0">Авторизація</h4>

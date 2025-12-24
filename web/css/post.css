@@ -1,3 +1,13 @@
+/* заголовок сторінки */
+.page-title {
+
+    font-size: 30px;    
+    color: #212121 !important;       
+    font-weight: 600;      
+    margin-bottom: 10px;  
+
+}
+
 .post-card {
     transition: all .3s;
     border: 1px solid #dee2e6;
@@ -5,6 +15,10 @@
     position: relative;
     border-radius: 5px;
     overflow: hidden;
+
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
 }
 
 
@@ -25,6 +39,10 @@
 
 .post-details {
     padding: 10px 15px;
+    flex-grow: 1;
+
+    display: flex; 
+    flex-direction: column;
 }
 
 .post-title {
@@ -32,6 +50,7 @@
     font-weight: 600;
     margin-bottom: 8px;
     color: #212121;
+    /* min-height: 48px; */
 }
 
 .post-title:hover {
@@ -43,13 +62,14 @@
     font-weight: 400;
     color: #212121;
     margin-bottom: 8px;
+    /* min-height: 60px; */
 }
 
 .post-date {
     font-size: 13px;
     font-weight: 400;
     color: #212121;
-    margin-bottom: 0px;
+    margin-top: auto;
 }
 
 
@@ -98,3 +118,59 @@
     font-size: 17px;
     font-weight: 500;
 }
+
+/* для фільтрації */
+.post-search label {
+    font-size: 18px; 
+    color: #212121; 
+    font-weight: 600; 
+    margin-bottom: 6px; 
+    display: inline-block; 
+}
+
+
+/* Поля вводу */
+.post-search input.form-control,
+.post-search select.form-control {
+    font-size: 16px;
+    font-weight: 400;
+    color: #212121;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 6px;
+}
+
+/* Фокус */
+.post-search input.form-control:focus,
+.post-search select.form-control:focus {
+    box-shadow: none;
+    border-color: #dee2e6 !important;
+    color: #212121 !important;
+}
+
+/* .post-search {
+    background-color: #fff !important;
+} */
+
+.clear-button { /* ОЧИСТИТИ */
+    font-size: 17px;
+    height: 42px;
+    font-weight: 500;
+    background-color: #fff !important; 
+    color: #212121 !important; 
+    border: 1px solid #212121 !important; 
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.clear-button:hover {
+    color: #212121 !important;
+    background-color: #FFEB3B !important;
+    opacity: 0.8;
+}
+
+.clear-button:active {
+    color: #212121 !important;
+    background-color: #FFEB3B !important;
+    border: 1px solid #FFEB3B !important;
+}
+

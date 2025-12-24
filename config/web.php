@@ -6,6 +6,9 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
+    
+    'timeZone' => 'Europe/Kyiv',
+
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -22,6 +25,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            'loginUrl' => ['auth/login'], // на сторінку авторизації
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -50,6 +54,11 @@ $config = [
             ],
         ],
         */
+    ],
+    'modules' => [ 
+        'admin' => [ 
+            'class' => 'app\modules\admin\Module', 
+        ], 
     ],
     'params' => $params,
 ];

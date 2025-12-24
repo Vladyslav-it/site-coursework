@@ -11,4 +11,12 @@ class Post extends ActiveRecord {
 
     }
 
+    public function getCategory() { 
+        return $this->hasOne(Category::class, ['id' => 'category_id']); 
+    } 
+    
+    public function getTags() { 
+        return $this->hasMany(Tag::class, ['id' => 'tag_id']) ->viaTable('post_tag', ['post_id' => 'id']);
+    }
+
 }

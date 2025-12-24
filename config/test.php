@@ -13,6 +13,8 @@ return [
         '@npm'   => '@vendor/npm-asset',
     ],
     'language' => 'en-US',
+
+    'modules' => [ 'admin' => [ 'class' => 'app\modules\admin\Module', ], ],
     'components' => [
         'db' => $db,
         'mailer' => [
@@ -34,6 +36,7 @@ return [
         'request' => [
             'cookieValidationKey' => 'test',
             'enableCsrfValidation' => false,
+            'methodParam' => '_method',
             // but if you absolutely need it set cookie domain to localhost
             /*
             'csrfCookie' => [

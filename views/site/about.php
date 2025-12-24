@@ -4,15 +4,35 @@
 
 use yii\helpers\Html;
 
-$this->title = 'About';
+$this->title = 'Про блог';
 $this->params['breadcrumbs'][] = $this->title;
+
+$this->registerCssFile('@web/css/breadcrumb.css');
+$this->registerCssFile('@web/css/about.css');
 ?>
+<h1 class="page-title"><?= Html::encode($this->title) ?></h1>
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
+    
 
-    <p>
-        This is the About page. You may modify the following file to customize its content:
-    </p>
+    <div class="about-image">
+        <img src="images/blog-about.jpg" alt="Про блог">
+    </div>
 
-    <code><?= __FILE__ ?></code>
+    <div class="about-content">
+        <p>
+            Вітаю вас на своєму сайті блогу, тематики "Поради щодо здорового харчування". У даному блозі я буду ділитися своїми думками та збиратиму
+            інформацію з різних джерел. На даному сайті у нас можна вільно думати (писати коментарі) але звичайно без ненормативної лексики та образ.
+            Даний блог має на меті зібрати поруч людей що прагануть здорового способу життя та цікавляться власни харчуваннмя.
+            Тут ми ділимося досвідом, порадами та натхненням.
+        </p>
+        <p>
+            У даному блозі ви будете знаходити різноманітні статті, щодо корисниз продуктів, лайфхаки для щодення, а також
+            думки різних експертів.
+        </p>
+        <p>
+            Я сподіваюсь, що я знаю спільнодумців і вам сподобається перебувати у нас на довго. Бажаю вам міцного здоров'я та хорошого настрою!
+        </p>
+    </div>
+
+
 </div>

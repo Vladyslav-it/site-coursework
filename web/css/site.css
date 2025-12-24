@@ -30,6 +30,49 @@ body {
     font-style: italic;
 }
 
+/* хедер */
+.my-header {
+    background-color: #FDD835 !important; 
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);  
+}
+
+.navbar-nav { 
+    margin-left: auto; 
+    display: flex; 
+    gap: 20px; 
+}
+
+/* пункти меню */
+.navbar-nav > li > a {
+    color: #212121 !important;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 8px 15px;
+    transition: opacity 0.3s ease;
+}
+
+/* Ховер */
+.navbar-nav > li > a:hover {
+    opacity: 0.8;
+    color: #212121 !important;
+    text-decoration: none;
+}
+
+/* бургер */
+.navbar-toggler {
+    border: 1px solid #212121 !important; 
+    box-shadow: none !important;         
+}
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/* взято з відкритих джерел */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(33,33,33,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+
 /* add sorting icons to gridview sort links */
 a.asc:after, a.desc:after {
     content: '';
@@ -110,7 +153,6 @@ a.desc:after {
 	border: 1px solid #dee2e6;
     
 }
-
 
 /* Стилізація власна  */
 .form-title {
@@ -200,3 +242,92 @@ a.desc:after {
     border-color: #FFEB3B !important;
 }
 
+/* заголовок сторінки */
+.page-title {
+
+    font-size: 30px;    
+    color: #212121 !important;       
+    font-weight: 600;      
+    margin-bottom: 10px;  
+
+}
+
+@media (max-width: 991px) {
+  .breadcrumb {
+    margin-top: 70px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    margin-top: 20px !important;
+  }
+}
+
+/* Слайдер */
+#carousel {
+    max-height: 300px; 
+    overflow: hidden;
+    border-radius: 5px; 
+}
+
+#carousel .carousel-item img {
+    height: 300px;       
+    object-fit: cover;  
+}
+
+/* для блочків 1*/
+.items .item {
+    min-height: 100%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+
+    background-color: #fff !important;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    cursor: default;
+}
+
+/* для блочків 2*/
+.items .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* для блочків 3*/
+.items .item i {
+    font-size: 40px;
+    color: #FDD835; 
+    margin-bottom: 10px;
+}
+
+/* Welcome-блок */
+.welcome-block h2 {
+    font-weight: 600;
+    color: #212121 !important;
+    cursor: default;
+}
+
+.welcome-block p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #212121 !important;
+    cursor: default;
+}
+
+/* для картки */
+.items .item h5 {
+    font-weight: 600;
+    color: #212121;
+    margin-bottom: 10px;
+}
+
+.items .item p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #212121;
+}

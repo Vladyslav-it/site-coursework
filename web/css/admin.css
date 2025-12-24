@@ -1,0 +1,230 @@
+/* заголовок сторінки */
+.page-title {
+
+    font-size: 30px;    
+    color: #212121 !important;       
+    font-weight: 600;      
+    margin-bottom: 10px;  
+
+}
+
+/* кількість оголошень */
+.grid-view .summary {
+    font-size: 16px;
+    color: #212121 !important; 
+}
+
+/* для таблиці  початок*/
+
+/* Загальні стилі для таблиці */
+.grid-view table {
+    font-size: 18px;       
+    color: #212121 !important;        
+
+}
+
+/* Заголовки колонок фон */
+.grid-view table thead th {
+    font-weight: 600;
+    padding: 10px;
+}
+
+/* Заголовки колонок тескт */
+.grid-view table thead th a { 
+    color: #212121 !important; 
+    text-decoration: none; 
+    font-weight: 600;  
+    font-size: 16px;  
+    transition: color 0.3s ease; 
+}
+
+/* Наведення на заголовок */ 
+.grid-view table thead th a:hover { 
+    color: #616161 !important;
+}
+
+/* Комірки таблиці */
+.grid-view table td {
+    padding: 10px;
+    font-weight: 500;  
+    font-size: 16px; 
+    color: #212121 !important;  
+    
+}
+
+
+/* для таблиці  кінець*/
+
+/*  фокус */ 
+.grid-view table .filters input.form-control:focus { 
+    box-shadow: none;
+    border-color: #dee2e6 !important;
+    color: #212121 !important;  
+}
+
+/*  заголовки полів заповнення */ 
+.posts-form label,
+.category-form label { 
+    font-size: 18px; 
+    color: #212121; 
+    font-weight: 600; 
+    margin-bottom: 6px; 
+    display: inline-block; 
+}
+
+.posts-form input.form-control, .posts-form textarea.form-control, .posts-form select.form-control, .category-form input.form-control { 
+    font-size: 16px; 
+    font-weight: 400;
+    color: #212121; 
+    border: 1px solid #dee2e6 !important; 
+    border-radius: 6px; 
+}
+
+/* без синьої обводки */ 
+.posts-form input.form-control:focus, 
+.posts-form textarea.form-control:focus, 
+.posts-form select.form-control:focus,
+.category-form input.form-control:focus { 
+    box-shadow: none;
+    border-color: #dee2e6 !important;
+    color: #212121 !important;  
+}
+
+/* Контейнер CKEditor */ 
+.posts-form .cke { 
+    border-radius: 6px !important; 
+    border: 1px solid #dee2e6!important; 
+}
+
+/* Контейнер кожного чекбокса */ 
+.posts-form #posts-tagids label { 
+    display: inline-block; 
+    margin-right: 12px;
+    font-size: 16px; 
+    color: #212121 !important; 
+    font-weight: 400; 
+    cursor: pointer; 
+}
+
+/* сам чек */
+.posts-form #posts-tagids input[type="checkbox"] { 
+    width: 18px; 
+    height: 18px; 
+    margin-right: 6px; 
+    vertical-align: middle; 
+
+    border-radius: 1px !important; 
+    border-color: #dee2e6 !important;
+    background-color: #F7F7F7 !important;
+}
+
+/* активний чекбокс */
+.posts-form #posts-tagids input[type="checkbox"]:checked {
+    /* background-color: #FFEB3B !important;
+    border-color: #FFEB3B !important; */
+    accent-color: #FFEB3B !important;
+    border-radius: 3px !important; 
+}
+
+
+/* Кнопка Оновити */
+.posts-view .btn-primary,
+.category-view .btn-primary {
+    background-color: #FDD835 !important; /* синій */
+    border: 1px #FDD835 !important; 
+    color: #212121 !important;
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 10px 10px; 
+    border-radius: 5px !important; 
+    transition: all .3s;
+
+}
+
+.posts-view .btn-primary:hover,
+.category-view .btn-primary:hover {
+    color: #212121 !important;
+    background-color: #FDD835 !important;   
+    opacity: 0.8;
+}
+
+.posts-view .btn-primary:focus,
+.category-view .btn-primary:focus {
+    box-shadow: none;
+}
+
+.posts-view .btn-primary:active,
+.category-view .btn-primary:active {
+    color: #212121 !important;
+    background-color: #FDD835 !important;
+    border: 1px #FDD835 !important; 
+}
+
+
+/* Кнопка Видалити */
+.posts-view .btn-danger,
+.category-view .btn-danger {
+    background-color: #D32F2F !important; /* червоний */
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px #D32F2F !important; 
+    
+    color: #212121 !important;
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 10px 10px; 
+    border-radius: 5px !important; 
+    transition: all .3s;
+}
+
+.posts-view .btn-danger:focus,
+.category-view .btn-danger:focus {
+    box-shadow: none;
+}
+
+.posts-view .btn-danger:hover,
+.category-view .btn-danger:hover {
+    color: #212121 !important;
+    background-color: #D32F2F !important;
+    opacity: 0.8;
+}
+
+.posts-view .btn-danger:active,
+.category-view .btn-danger:active {
+    color: #212121 !important;
+    background-color: #D32F2F !important;
+    border: 1px #D32F2F !important; 
+}
+
+/* для обох кнопок */
+.posts-view .btn-primary,
+.posts-view .btn-danger,
+.category-view .btn-primary, 
+.category-view .btn-danger {
+    min-width: 140px;          
+
+}
+
+
+
+
+
+/* Іконки дій у GridView (index) */
+/* .grid-view .action-column a svg {
+    fill: #FFEB3B !important;  
+    transition: fill 0.3s ease;
+} */
+
+/* Ховер по іконці */
+/* .grid-view .action-column a:hover svg {
+    fill: #fdd835 !important;   
+    opacity: 0.9;
+} */
+
+
+
+
+
+

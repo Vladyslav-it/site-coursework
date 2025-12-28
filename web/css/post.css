@@ -19,6 +19,7 @@
     display: flex; 
     flex-direction: column; 
     height: 100%; 
+    width: 100%;
 }
 
 
@@ -46,14 +47,20 @@
 }
 
 .post-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #212121;
-    /* min-height: 48px; */
+    margin-bottom: 15px;
+    line-height: 1 !important;
 }
 
-.post-title:hover {
+.post-title a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #212121;
+    text-decoration: none;
+    /* min-height: 48px; */
+
+}
+
+.post-title a:hover {
     color: #616161;
 }
 
@@ -63,6 +70,7 @@
     color: #212121;
     margin-bottom: 8px;
     /* min-height: 60px; */
+    cursor: default;
 }
 
 .post-date {
@@ -70,6 +78,7 @@
     font-weight: 400;
     color: #212121;
     margin-top: auto;
+    cursor: default;
 }
 
 
@@ -173,4 +182,5 @@
     background-color: #FFEB3B !important;
     border: 1px solid #FFEB3B !important;
 }
+
 

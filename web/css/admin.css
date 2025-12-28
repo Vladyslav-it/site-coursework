@@ -165,7 +165,7 @@
 /* Кнопка Видалити */
 .posts-view .btn-danger,
 .category-view .btn-danger {
-    background-color: #D32F2F !important; /* червоний */
+    background-color: #D32F2F !important; 
     font-size: 16px;
     font-weight: 500;
     border: 1px #D32F2F !important; 
@@ -206,25 +206,4 @@
     min-width: 140px;          
 
 }
-
-
-
-
-
-/* Іконки дій у GridView (index) */
-/* .grid-view .action-column a svg {
-    fill: #FFEB3B !important;  
-    transition: fill 0.3s ease;
-} */
-
-/* Ховер по іконці */
-/* .grid-view .action-column a:hover svg {
-    fill: #fdd835 !important;   
-    opacity: 0.9;
-} */
-
-
-
-
-
 

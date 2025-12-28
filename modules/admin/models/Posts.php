@@ -137,8 +137,8 @@ class Posts extends \yii\db\ActiveRecord
         $value = $this->$attribute;
 
 
-        if (mb_strlen($value) < 30 || mb_strlen($value) > 1500) {
-            $this->addError($attribute, 'Опис повинен бути від 30 до 1500 символів.');
+        if (mb_strlen($value) < 30 || mb_strlen($value) > 5000) {
+            $this->addError($attribute, 'Опис повинен бути від 30 до 5000 символів.');
             return;
         }
     }

@@ -22,7 +22,10 @@ class PostSearch extends Post
     public function search($params)
     {
         
-        $query = Post::find()->joinWith(['category', 'tags'])->groupBy('posts.id');
+        $query = Post::find()
+        ->joinWith(['category', 'tags'])
+        ->groupBy('posts.id')
+        ->orderBy(['posts.created_at' => SORT_DESC]);
 
 
         $dataProvider = new ActiveDataProvider([

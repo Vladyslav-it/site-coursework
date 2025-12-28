@@ -51,7 +51,7 @@ class Category extends \yii\db\ActiveRecord
     {
         $value = $this->$attribute;
 
-        if (!preg_match('/^[a-zA-Zа-яА-ЯіїєґІЇЄҐ0-9\'",\.\-:;– ]+$/u', $value)) {
+        if (!preg_match('/^[a-zA-Zа-яА-ЯіїєґІЇЄҐ0-9\'",\.\-:;–— ]+$/u', $value)) {
             $this->addError($attribute, 'Допустимі символи: українські та латинські літери, цифри, кома, крапка, лапки та дефіс.');
             return;
         }

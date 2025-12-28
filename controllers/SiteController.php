@@ -131,14 +131,14 @@ class SiteController extends Controller
 
     public function actionEntry() {
 
-        $model = new EntryForm();
+        // $model = new EntryForm();
 
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            // дані в $model перевірено
-            return $this->render('entry-confirm', ['model' => $model]);
-        }
+        // if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+        //     // дані в $model перевірено
+        //     return $this->render('entry-confirm', ['model' => $model]);
+        // }
 
-        return $this->render('entry', ['model' => $model]);
+        // return $this->render('entry', ['model' => $model]);
     }
 
 }

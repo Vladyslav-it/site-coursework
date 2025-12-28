@@ -55,18 +55,26 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <!-- Зображення -->
                     <div class="post-image">
-                        <?php if (!empty($post->image)): ?>
+                        <a href="<?= Url::to(['post/view', 'id' => $post->id]) ?>">
+                            <img src="<?= $post->image ?: 'images/no-photo.png' ?>" alt="post">
+                        </a>
+                        <!-- <?php if (!empty($post->image)): ?>
                             <img src="<?= $post->image ?>" alt="post">
                         <?php else: ?>
                             <img src="images/no-photo.png" alt="Зображення відсутнє">
-                        <?php endif; ?>
+                        <?php endif; ?> -->
                     </div>
 
                     <!-- назва, опис, дата створення -->
                     <div class="post-details">
                         <h2 class="post-title">
-                            <?= Html::encode(StringHelper::truncate(html_entity_decode(strip_tags($post->title)), 35)) ?>
+                            <a href="<?= Url::to(['post/view', 'id' => $post->id]) ?>">
+                                <?= Html::encode(StringHelper::truncate(html_entity_decode(strip_tags($post->title)), 35)) ?>
+                            </a>
                         </h2>
+                        <!-- <h2 class="post-title">
+                            <?= Html::encode(StringHelper::truncate(html_entity_decode(strip_tags($post->title)), 35)) ?>
+                        </h2> -->
 
                         <p class="post-text">
                             <?= Html::encode(StringHelper::truncate(html_entity_decode(strip_tags($post->description)), 45)) ?>

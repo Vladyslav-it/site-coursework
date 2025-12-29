@@ -33,7 +33,7 @@ class CategorySearch extends Category
         $this->load($params);
 
         if (!$this->validate()) {
-            // якщо валід. не пройд. поверт. всі записи
+            // якщо валід. не пройд. поверт. 
             return $dataProvider;
         }
 

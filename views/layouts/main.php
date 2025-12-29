@@ -36,7 +36,6 @@ $this->registerCssFile('@web/css/breadcrumb.css');
     <header id="header">
         <?php
         NavBar::begin([
-            // 'brandLabel' => Yii::$app->name,
             'brandLabel' => Html::img('@web/images/logo.png', ['alt' => 'YourHealth', 'height' => '50']),
 
             'brandUrl' => Yii::$app->homeUrl,
@@ -46,10 +45,9 @@ $this->registerCssFile('@web/css/breadcrumb.css');
             'options' => ['class' => 'navbar-nav'],
             'items' => array_merge(
                 [
-                    // ['label' => 'Головна', 'url' => ['/site/index']],
                     ['label' => 'Пости', 'url' => ['/post/index']],
                     ['label' => 'Про блог', 'url' => ['/site/about']],
-                    // ['label' => 'Contact', 'url' => ['/site/contact']],
+
                 ],
                 Yii::$app->user->isGuest
                     ? [

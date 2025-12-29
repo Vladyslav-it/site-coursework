@@ -14,13 +14,7 @@ class SignupForm extends Model {
     
     public function rules() {
 
-        $minLength = 8;
-        $maxLength = 32;
-
-        // допустипі символи і їхня кількість
-        $passwordRegex = '/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{' . $minLength . ',' . $maxLength . '}$/';
-        $emailRegex = '/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/';
-        $fullNameRegex = '/^[А-Яа-яІіЇїЄєҐґ\'\- ]+$/u';
+        
 
         return [
             [['name', 'email', 'password'], 'required', 'message' => 'Дане поле є обов’язковим до заповнення!'],

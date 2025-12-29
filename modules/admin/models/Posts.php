@@ -116,8 +116,8 @@ class Posts extends \yii\db\ActiveRecord
     {
         $value = $this->$attribute;
 
-        if (!preg_match('/^[a-zA-Zа-яА-ЯіїєґІЇЄҐ0-9\'",\.\-:;– ]+$/u', $value)) {
-            $this->addError($attribute, 'Допустимі символи: українські та латинські літери, цифри, кома, крапка, лапки та дефіс.');
+        if (!preg_match('/^[a-zA-Zа-яА-ЯіїєґІЇЄҐ0-9\'",\.\-:;–—\?!() ]+$/u', $value)) {
+            $this->addError($attribute, 'Допустимі символи: українські та латинські літери, цифри, кома, крапка, лапки, дефіс, тире, знак питання, знак оклику та дужки.');
             return;
         }
 
@@ -235,27 +235,3 @@ class Posts extends \yii\db\ActiveRecord
         return true;
     }
 }
-
-
-   // public function beforeSave($insert)
-    // {
-    //     if ($this->isNewRecord) {
-    //         $this->image = UploadedFile::getInstance($this, 'image');
-
-    //         if ($this->image) {
-    //             $this->string = substr(uniqid('image'), 0, 12);
-    //             $this->filename = '@webroot/images/' . $this->string . '.' . $this->image->extension;
-    //             $this->image->saveAs($this->filename);
-    //             $this->image = '/' . $this->filename;
-    //         }
-
-    //         // $this->text_preview = BaseStringHelper::truncate($this->description, 250, '...');
-    //     } else {
-    //         $this->image = UploadedFile::getInstance($this, 'image');
-    //         if ($this->image) {
-    //             $this->image->saveAs(substr($this->image, 1));
-    //         }
-    //     }
-
-    //     return parent::beforeSave($insert);
-    // }

@@ -56,7 +56,6 @@
     font-weight: 600;
     color: #212121;
     text-decoration: none;
-    /* min-height: 48px; */
 
 }
 
@@ -69,7 +68,6 @@
     font-weight: 400;
     color: #212121;
     margin-bottom: 8px;
-    /* min-height: 60px; */
     cursor: default;
 }
 
@@ -155,10 +153,6 @@
     border-color: #dee2e6 !important;
     color: #212121 !important;
 }
-
-/* .post-search {
-    background-color: #fff !important;
-} */
 
 .clear-button { /* ОЧИСТИТИ */
     font-size: 17px;

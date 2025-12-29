@@ -18,10 +18,10 @@ class CommentController extends Controller
         }
 
         if (empty(Yii::$app->user->identity->isAdmin)) {
-            throw new ForbiddenHttpException('Доступ заборонено.');
+            throw new ForbiddenHttpException('Доступ заборонено!');
         }
 
-        // Якщо основний коментар — видаляємо і всі відповіді
+        // Якщо основний коментар, видаляємо і всі відповіді
         if ($comment->parent_id === null) {
             Comment::deleteAll(['parent_id' => $comment->id]);
         }

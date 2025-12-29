@@ -69,16 +69,16 @@ class PostsSearch extends Posts
 
         // grid filtering conditions 
         $query->andFilterWhere([
-            'id' => $this->id,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
-            'user_id' => $this->user_id,
-            'category_id' => $this->category_id,
+            'posts.id' => $this->id,
+            'posts.created_at' => $this->created_at,
+            'posts.updated_at' => $this->updated_at,
+            'posts.user_id' => $this->user_id,
+            'posts.category_id' => $this->category_id,
         ]);
 
         // ->andFilterWhere(['like', 'tags', $this->tags]);
-        $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'description', $this->description])
+        $query->andFilterWhere(['like', 'posts.title', $this->title])
+            ->andFilterWhere(['like', 'posts.description', $this->description])
             ->andFilterWhere(['like', 'category.title', $this->categoryTitle]); // фільтр по назві категорії
 
         return $dataProvider;

@@ -221,6 +221,12 @@ a.desc:after {
     border-radius: 5px;
 }
 
+.card-form input[type="text"]:focus,
+.card-form input[type="email"]:focus,
+.card-form input[type="password"]:focus {
+    box-shadow: none !important;
+}
+
 /* для чекбокса */
 .card-form .form-check-input {
     width: 18px;

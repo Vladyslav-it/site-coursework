@@ -58,11 +58,6 @@ $this->params['breadcrumbs'][] = $this->title;
                         <a href="<?= Url::to(['post/view', 'id' => $post->id]) ?>">
                             <img src="<?= $post->image ?: 'images/no-photo.png' ?>" alt="post">
                         </a>
-                        <!-- <?php if (!empty($post->image)): ?>
-                            <img src="<?= $post->image ?>" alt="post">
-                        <?php else: ?>
-                            <img src="images/no-photo.png" alt="Зображення відсутнє">
-                        <?php endif; ?> -->
                     </div>
 
                     <!-- назва, опис, дата створення -->
@@ -72,15 +67,10 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <?= Html::encode(StringHelper::truncate(html_entity_decode(strip_tags($post->title)), 35)) ?>
                             </a>
                         </h2>
-                        <!-- <h2 class="post-title">
-                            <?= Html::encode(StringHelper::truncate(html_entity_decode(strip_tags($post->title)), 35)) ?>
-                        </h2> -->
 
                         <p class="post-text">
                             <?= Html::encode(StringHelper::truncate(html_entity_decode(strip_tags($post->description)), 45)) ?>
                         </p>
-
-                        <!-- <p class="post-date">Дата публікації: <?= $post->created_at ?></p> -->
 
                         <p class="post-date">
                             <?php if ($post->updated_at && $post->updated_at !== $post->created_at): ?>

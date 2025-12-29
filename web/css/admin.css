@@ -120,8 +120,6 @@
 
 /* активний чекбокс */
 .posts-form #posts-tagids input[type="checkbox"]:checked {
-    /* background-color: #FFEB3B !important;
-    border-color: #FFEB3B !important; */
     accent-color: #FFEB3B !important;
     border-radius: 3px !important; 
 }
@@ -130,7 +128,7 @@
 /* Кнопка Оновити */
 .posts-view .btn-primary,
 .category-view .btn-primary {
-    background-color: #FDD835 !important; /* синій */
+    background-color: #FDD835 !important; 
     border: 1px #FDD835 !important; 
     color: #212121 !important;
     font-size: 16px;

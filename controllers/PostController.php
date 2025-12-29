@@ -26,7 +26,7 @@ class PostController extends Controller
 
     public function actionView($id)
     {
-        // $model = Post::findOne($id);
+        
         $model = Post::find()
             ->with(['author'])
             ->where(['id' => $id])
@@ -53,7 +53,7 @@ class PostController extends Controller
             if ($newComment->load(Yii::$app->request->post()) && $newComment->validate()) {
                 $newComment->post_id = $id;
                 $newComment->user_id = Yii::$app->user->id;
-                $newComment->parent_id = Yii::$app->request->post('parent_id'); // якщо передано
+                $newComment->parent_id = Yii::$app->request->post('parent_id'); 
                 $newComment->save();
                 return $this->redirect(['post/view', 'id' => $id]);
             }
@@ -68,43 +68,7 @@ class PostController extends Controller
         ]);
 
 
-
-        // return $this->render('view', [
-        //     'model' => $model,
-        // ]);
     }
 }
 
 
-// class PostController extends Controller {
-
-//     public function actionIndex() {
-//        $query = Post::find();
-
-//         $pagination = new Pagination([
-
-//             'defaultPageSize' => 6,
-
-//             'totalCount' => $query->count(),
-
-//         ]);
-
-//         $posts = $query->orderBy(['created_at' => SORT_DESC])
-
-//             ->offset($pagination->offset)
-
-//             ->limit($pagination->limit)
-
-//             ->all();
-
-//         return $this->render('index', [
-
-//             'posts' => $posts,
-
-//             'pagination' => $pagination,
-
-//         ]);
-
-//     }
-
-// }

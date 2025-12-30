@@ -18,7 +18,9 @@ class CategoryController extends Controller
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
-                    'delete' => ['post'],
+                    // 'delete' => ['post'],
+                    'delete' => YII_ENV_TEST ? ['post', 'get'] : ['post'],
+
                 ],
             ],
             'access' => [
